@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.0.1">
-    <title>{{blog.title}}</title>
+    <title>{{job.title}}</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
 
@@ -65,13 +65,12 @@
 </header>
 
 <main role="main">
-    <h2 class="text-center pt-3">{{blog.title}}</h2>
+    <h2 class="text-center pt-3">{{job.title}}</h2>
     <hr>
-    <div class="container">
-        <img class="img-fluid" src="{{blog.image.url}}">
-        <h6>{{blog.pub_date}}</h6>
+    <div class="text-center">
+        <img class="img-fluid" src="{{job.image.url}}" width="500" height="500">
         <br>
-        {{blog.body}}
+        {{job.summary}}
 
 
     </div>

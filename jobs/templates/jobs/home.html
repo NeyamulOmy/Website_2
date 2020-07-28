@@ -51,7 +51,7 @@
                     <a class="nav-link" target="_blank" href="https://www.facebook.com/neyamul.haque.39">Facebook</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% static 'resume.pdf' %}">Resume</a>
+                    <a class="nav-link" target="_blank" href="{% static 'neyamul_CV.pdf' %}">Resume</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'allblogs' %}">Blog</a>
@@ -71,19 +71,22 @@
             <p>
                 <a href="mailto:neyamul.omy@gmail.com" class="btn btn-primary my-2">E-mail </a>
             </p>
-            <img height="255" src="{%static 'motupajis.jpg' %}">
+            <img height="255" src="{%static 'omy.jpg' %}">
         </div>
     </section>
 
     <div class="album py-5 bg-light">
         <div class="container">
+            <h1 class="text-center">My works</h1>
+            <hr>
+            <br>
             <div class="row">
                 {% for job in jobs.all %}
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
                         <img src="{{job.image.url}}"  height="255"/>
                         <div class="card-body">
-                            <p class="card-text">{{job.summary}}</p>
+                            <a href="{%url 'jobdetail' job.id%}" class="card-text">{{job.title}}</a>
 
                         </div>
                     </div>
