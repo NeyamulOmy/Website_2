@@ -140,7 +140,6 @@ try:
     from .local_settings import *
 except ImportError:
     pass
-Added this in the settings.py
 
 LOGGING = {
     'version': 1,
