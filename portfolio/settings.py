@@ -81,7 +81,12 @@ DATABASES = {
         'USER': 'cgvzwtgczizvxd',
         'PASSWORD': 'f578c848aef995946d997d41a69a12c3acf563507fb8649f1fa9caef406e41df',
         'HOST': 'ec2-54-158-122-162.compute-1.amazonaws.com',
-        'POST': '5432'
+        'POST': '5432',
+        # 'NAME': 'portfoliodb',
+        # 'USER': 'postgres',
+        # 'PASSWORD': 'kuruk123',
+        # 'HOST': 'localhost',
+        # 'POST': '5432'
         #'DATABASE_URL': os.environ['DATABASE_URL']
     }
 }
@@ -126,6 +131,8 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
