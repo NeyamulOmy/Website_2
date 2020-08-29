@@ -31,6 +31,9 @@
           font-size: 3.5rem;
         }
       }
+    .dp{
+        border-radius: 50%
+    }
 
 
 
@@ -71,7 +74,7 @@
             <p>
                 <a href="mailto:neyamul.omy@gmail.com" class="btn btn-primary my-2">E-mail </a>
             </p>
-            <img height="255" src="{% static 'neyamul.jpg' %}">
+            <img class="dp" height="255" src="{% static 'neyamul.jpg' %}">
         </div>
     </section>
 
@@ -84,7 +87,7 @@
                 {% for job in jobs.all %}
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
-                        <img src="{{job.image.url}}"  height="255"/>
+                        <img src="{{job.image.url}}" height="255"/>
                         <div class="card-body">
                             <a href="{%url 'jobdetail' job.id%}" class="card-text">{{job.title}}</a>
 
